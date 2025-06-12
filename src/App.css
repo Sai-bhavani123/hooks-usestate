@@ -1,0 +1,153 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s ease;
+}
+
+.container.dark {
+  background-color: #121212 !important;
+  color: white;
+}
+
+.content-box {
+  width: 60%;
+  background-color: #ffffffcc;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.container.dark .content-box {
+  background-color: #1f1f1f;
+}
+
+.count-text {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.click-button,
+.theme-toggle {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #333;
+  transition: transform 0.2s;
+}
+
+.click-button:hover,
+.theme-toggle:hover {
+  transform: scale(1.05);
+  background-color: #555;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-box button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background-color: #444;
+}
+
+.toggle-link {
+  text-align: center;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ✅ Media Queries */
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+  .content-box {
+    width: 70%;
+    height: 90%;
+
+    padding: 20px;
+  }
+
+  .count-text {
+    font-size: 32px;
+  }
+
+  .click-button,
+  .theme-toggle {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .content-box {
+    width: 75%;
+  }
+
+  .count-text {
+    font-size: 40px;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
+  .content-box {
+    width: 60%;
+  }
+
+  .count-text {
+    font-size: 48px;
+  }
+}
